@@ -22,3 +22,16 @@ class KepElem {
       this.torol()
     })
   }
+
+  esemenyTrigger() {
+    const esemeny = new CustomEvent("kedvenc", {
+      detail: this,
+    });
+    window.dispatchEvent(esemeny);
+  }
+
+
+
+
+
+}
