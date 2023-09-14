@@ -1,37 +1,30 @@
 class KepElem {
-  constructor(szuloElem, elem) {
-    this.szuloElem = szuloElem;
-    this.elem = elem;
-    szuloElem.append(
-      `<div class="card"><div class="card-header">${elem.cim}</div><div class="card-body">${elem.éve}</div><button  class="kedvenc">Kedvenc</button><button  class="delete">Delete</button></div>`
-    );
-    /*
-<div class="card">
-  <div class="card-header">Header</div>
-  <div class="card-body">Content</div>
-  <div class="card-footer">Footer</div>
-</div>
-    */
+  #kep = {};
+  constructor(kep, szuloElem) {
+    this.#kep = kep;
+    this.tablaElem = szuloElem;
+    this.#sor();
+    this.sorElem = this.tablaElem.children("tr:last-child");
 
-    const BTTN = $(`.kedvenc:last-child`);
-    const deletebt=$(`.delete:last-child`)
-    BTTN.on("click", () => {
-      this.esemenyTrigger();
-    });
-    deletebt.on("click",() => {
-      this.torol()
-    })
+    //console.log(this.pipa)
   }
+  #sor() {
+    let txt = "";
 
-  esemenyTrigger() {
-    const esemeny = new CustomEvent("kedvenc", {
-      detail: this,
-    });
-    window.dispatchEvent(esemeny);
+    txt += "<tr>";
+    for (const key in this.#kep) {
+      const element = this.#kep[key];
+      if (key === "kep") {
+        txt += `<td><div><img src ="${element}" alt=""></div></td>`;
+      }
+      txt += `</tr>`;
+    }
+
+    this.tablaElem.append(txt);
   }
-
-
-
-
-
+  #esemenyTrigger(esemenynev) {
+    const esemenyem = new CustomEvent(esemenynev, { detail: this });
+    window.dispatchEvent(esemenyem);
+  }
 }
+export default KepElem;
