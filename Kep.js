@@ -14,4 +14,19 @@ export const KepekLista = [
         kep: "kepek/napraforgo.jpg",
         leiras: "napraforgo",
     },
+    {
+        cim: "bobtail",
+        kep: "kepek/bobtail.jpg",
+        leiras: "bobtail",
+    },
+    {
+        cim: "boci",
+        kep: "kepek/boci.jpg",
+        leiras: "tehen",
+    },
+    {
+        cim: "teki",
+        kep: "kepek/teki.jpg",
+        leiras: "teknos",
+    },
 ];
