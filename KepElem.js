@@ -11,13 +11,13 @@ class KepElem {
   #sor() {
     let txt = "";
 
-    txt += "<tr>";
+    
     for (const key in this.#kep) {
       const element = this.#kep[key];
       if (key === "kep") {
-        txt += `<td><div><img src ="${element}" alt=""></div></td>`;
+        txt += `<div><img src ="${element}" alt=""></div>`;
       }
-      txt += `</tr>`;
+      
     }
 
     this.tablaElem.append(txt);

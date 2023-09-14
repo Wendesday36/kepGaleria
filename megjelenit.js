@@ -5,8 +5,8 @@ class Megjelenit {
     constructor(lista, szuloElem) {
       this.#lista = lista;
   
-      szuloElem.append(`<table class= table >`);
-      this.tablaElem = szuloElem.children("table");
+      szuloElem.append(`<div class= table >`);
+      this.tablaElem = szuloElem.children(".table");
   
       this.megjelenit();
     }
