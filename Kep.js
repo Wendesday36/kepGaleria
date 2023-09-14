@@ -28,5 +28,21 @@ export const KepekLista = [
         cim: "főszereplők",
         kep: "kepek/images.jpg",
         leiras: "Rhys Feyre",
+       
+    },
+    {
+        cim: "bobtail",
+        kep: "kepek/bobtail.jpg",
+        leiras: "bobtail",
+    },
+    {
+        cim: "boci",
+        kep: "kepek/boci.jpg",
+        leiras: "tehen",
+    },
+    {
+        cim: "teki",
+        kep: "kepek/teki.jpg",
+        leiras: "teknos",
     },
 ];
